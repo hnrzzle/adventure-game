@@ -4,7 +4,7 @@ const runningPath = {
   image: null,
   description: [`You are out for your daily run in City Park.  You're just starting to get into your rhythm when a squirrel leaps from a 
                 nearby tree onto your shoulder!  Startled, you stop and try to pull it off you, but the little guy dives into your 
-                fanning pack, clearly fiending for a Luna Bar hit.  In a flash, he leaps down and away and sits up on a nearby bench,
+                fanny pack, clearly fiending for a Luna Bar hit.  In a flash, he leaps down and away and sits up on a nearby bench,
                 waving something at you- your wallet!`,
                 `You're on the main running path, with no squirrel in sight.`
         ],
