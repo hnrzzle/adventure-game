@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import full from'../images/fullheart.png';
-import half from'../images/halfheart.png';
-import empty from'../images/emptyheart.png';
+import full from'../../images/fullheart.png';
+import half from'../../images/halfheart.png';
+import empty from'../../images/emptyheart.png';
 import styles from './Player.css';
 
 const hearts = {
