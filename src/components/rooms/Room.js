@@ -23,7 +23,8 @@ export default class Room extends Component {
     return (
       <section className={styles.room} style={{ backgroundImage: `url(${image})` }}>
         <h3>{title}</h3>
-        <p>{description}</p>
+        {!!items.length && <p>{description[0]}</p>}
+        {!items.length && <p>{description[1]}</p>}
         {!!items.length && (
           <div>
             <h4>Items</h4>
