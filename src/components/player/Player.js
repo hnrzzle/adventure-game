@@ -60,7 +60,7 @@ export default class Player extends Component {
           <span>{name}</span>
         }
         &nbsp;
-        <button onClick={this.handleEdit}>{editing ? 'X' : '✎'}</button>
+        <button onClick={this.handleEdit}>{editing ? '✓' : '✎'}</button>
         <div id="hearts">{energy}{hearts}</div>
       </div>
     ); 
