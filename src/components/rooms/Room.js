@@ -16,7 +16,7 @@ export default class Room extends Component {
 
   render() {
     const { room } = this.props;
-    const { title, description, image, doors, items } = room;
+    const { title, description, image, directions, items } = room;
 
 
     return (
@@ -24,8 +24,8 @@ export default class Room extends Component {
         <h3>{title}</h3>
         <p>{description}</p>
 
-        <h4>Doors</h4>
-        <ul className="doors">
+        <h4>Directions</h4>
+        <ul className="directions">
         </ul>
 
       </section>
