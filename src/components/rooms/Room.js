@@ -10,13 +10,14 @@ export default class Room extends Component {
 
   static propTypes = {
     room: PropTypes.object,
-    onInteract: PropTypes.func.isRequired
-    // onMove: propTypes.func.isRequired,
+    action: PropTypes.string,
+    onInteract: PropTypes.func.isRequired,
+    onMove: PropTypes.func.isRequired,
     // onPickup: propTypes.func.isRequired,
   };
 
   render() {
-    const { room, onInteract } = this.props;
+    const { room, onInteract, onMove, action } = this.props;
     const { title, description, image, directions, items } = room;
 
 
@@ -34,7 +35,14 @@ export default class Room extends Component {
 
         <h4>Directions</h4>
         <ul className="directions">
+          {Object.entries(directions).map(([direction, roomKey]) => {
+            return <Direction 
+              key={direction} 
+              direction={direction}
+              onOpen={() => onMove(roomKey)}/>;
+          })}
         </ul>
+        {action && <p className="action">{action}</p>}
 
       </section>
     );

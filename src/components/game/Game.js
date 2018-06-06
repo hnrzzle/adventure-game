@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Rooms, { start as currentRoom } from '../rooms/Rooms';
+import { rooms, start as currentRoom } from '../rooms/Rooms';
 import Player from '../player/Player';
 import Room from '../rooms/Room';
 
@@ -7,17 +7,21 @@ import Room from '../rooms/Room';
 export default class Game extends Component {
 
   state = {
+    action: '',
     player: {
       name: 'Player 1',
       energy: 45
     },
-    Rooms,
+    rooms,
     currentRoom: currentRoom
   };
 
-  // handleMove = key => {
-
-  // }
+  handleMove = roomKey => {
+    this.setState(prevState => ({ 
+      currentRoom: prevState.rooms[roomKey],
+      action: ''
+    }));
+  };
 
   handleInteract = item => {
     this.setState(({ player, currentRoom }) => {

@@ -1,7 +1,6 @@
 :local(.room) {
   background-size: cover;
   height: 500px;
-  color: white;
   padding: 10px;
 
   p.action {
@@ -23,7 +22,6 @@
       button {
         width: 100%;
         background: steelblue;
-        color: white;
         font-weight: bolder;
       }
     }

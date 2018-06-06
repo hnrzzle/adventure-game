@@ -1,6 +1,6 @@
 const runningPath = {
   title: 'Running Path',
-  image: 'URL',
+  image: null,
   description: [`You are out for your daily run in City Park.  You're just starting to get into your rhythm when a squirrel leaps from a 
                 nearby tree onto your shoulder!  Startled, you stop and try to pull it off you, but the little guy dives into your 
                 fanning pack, clearly fiending for a Luna Bar hit.  In a flash, he leaps down and away and sits up on a nearby bench,
@@ -10,7 +10,7 @@ const runningPath = {
   items: [    
     {
     key: 'squirrel',
-    image: 'URL',
+    image: null,
     description: 'Your squirrel nemesis has your wallet!'
   }
   ],
@@ -26,7 +26,7 @@ const runningPath = {
 
 const meadow = {
   title: 'Meadowlark Meadow',
-  image: 'URL',
+  image: null,
   description: [`You follow the path into the open meadow, one of your favorite parts in the park.  The sun is out and there are birds everywhere.  
                 There is one sitting on a wire very close to you, looking at you`,
                 `The meadow is sunny and open, with birds everywhere.`
@@ -34,7 +34,7 @@ const meadow = {
   items: [
     {
       key: 'bird',
-      image: 'URL',
+      image: null,
       description: 'Bird on a Wire',
     }
   ],
@@ -51,14 +51,14 @@ const meadow = {
 
 const garden = {
   title: 'A Secluded Garden',
-  image: 'URL',
+  image: null,
   description: [`You walk into a secluded little garden.  You\ve seen it before, but never explored it during your runs.  The landscaping is simple,
                 with a large bush in the middle.  You seem to hear chittering sounds from nearby.`,
               `A quiet little garden.  There are benches and bushes, but apparently nothing interesting.`],
   items: [
     {
       key: 'bush',
-      image: 'URL',
+      image: null,
       description: 'An interesting looking bush....'
     }
   ],
@@ -76,14 +76,14 @@ const garden = {
 
 const aTallHill = {
   title: 'Mount Hill',
-  image: 'URL',
+  image: null,
   description: [`You climb the tall hill you/ve always avoided on your runs.  It is exausting, but there are lots of tall 
                 oaks and pines at the summit, lots of places for squirrels to hide.`,
               `You've reached the top of the tall hill, but all the trees are empty.  There's a beautiful view of the city, though.`],
   items: [
     {
       key: 'squirrel',
-      image: 'URL',
+      image: null,
       description: 'Your squirrel nemesis has your wallet!'
     }
   ],
