@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Direction from '../direction/Direction';
-import Item from '../game/Item';
+import Item from '../item/Item';
 
 import styles from './Room.css';
 
@@ -24,6 +24,7 @@ export default class Room extends Component {
     return (
       <section className={styles.room} style={{ backgroundImage: `url(${image})` }}>
         <h3>{title}</h3>
+        {action && <p className="action">{action}</p>}
         {!!items.length && <p>{description[0]}</p>}
         {!items.length && <p>{description[1]}</p>}
         {!!items.length && (
@@ -42,7 +43,6 @@ export default class Room extends Component {
               onOpen={() => onMove(roomKey)}/>;
           })}
         </ul>
-        {action && <p className="action">{action}</p>}
 
       </section>
     );

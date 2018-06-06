@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import styles from './Item.css';
+import styles from './Item.css';
 
 Item.propTypes = {
   items: PropTypes.array,
@@ -9,7 +9,7 @@ Item.propTypes = {
 
 export default function Item({ items, onUse }) {
   return (
-    <ul>
+    <ul className={styles.items}>
       {items.map(item => (
         <li key={item.key}>
           <button onClick={() => onUse(item)}>{item.description}</button>

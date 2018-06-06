@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { rooms, start as currentRoom } from '../rooms/Rooms';
+import { rooms, start } from '../rooms/rooms';
 import Player from '../player/Player';
 import Room from '../rooms/Room';
 
@@ -13,13 +13,17 @@ export default class Game extends Component {
       energy: 45
     },
     rooms,
-    currentRoom: currentRoom
+    currentRoom: start
   };
 
   handleMove = roomKey => {
     this.setState(prevState => ({ 
       currentRoom: prevState.rooms[roomKey],
-      action: ''
+      action: '',
+      player: {
+        ...prevState.player,
+        energy: prevState.rooms[roomKey].type === 'hill' ? prevState.player.energy -5 : prevState.player.energy -2,
+      }
     }));
   };
 
@@ -27,7 +31,7 @@ export default class Game extends Component {
     this.setState(({ player, currentRoom }) => {
       const index = currentRoom.items.indexOf(item);
       if(index === -1) return;
-      currentRoom.item.splice(index, 1);
+      currentRoom.items.splice(index, 1);
 
       const { energy, action } = currentRoom.use(player.energy);
       player.energy = energy; 

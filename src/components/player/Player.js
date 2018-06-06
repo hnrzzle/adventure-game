@@ -61,7 +61,7 @@ export default class Player extends Component {
         }
         &nbsp;
         <button onClick={this.handleEdit}>{editing ? 'X' : '✎'}</button>
-        <div id="hearts">{hearts}</div>
+        <div id="hearts">{energy}{hearts}</div>
       </div>
     ); 
   }
