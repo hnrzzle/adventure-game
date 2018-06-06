@@ -19,18 +19,16 @@ export default class Game extends Component {
 
   // }
 
-  handleUse = (item, ) => {
-
-
-  };
-
   handleInteract = item => {
     this.setState(({ player, currentRoom }) => {
       const index = currentRoom.items.indexOf(item);
       if(index === -1) return;
       currentRoom.item.splice(index, 1);
 
-      currentRoom.use(this.state.player.energy);
+      const { energy, action } = currentRoom.use(player.energy);
+      player.energy = energy; 
+
+      return { player, action };
     });
 
   }
