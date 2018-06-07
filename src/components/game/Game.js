@@ -22,7 +22,7 @@ export default class Game extends Component {
       action: '',
       player: {
         ...prevState.player,
-        energy: prevState.rooms[roomKey].type === 'hill' ? prevState.player.energy -5 : prevState.player.energy -2,
+        energy: prevState.rooms[roomKey].type === 'hill' ? prevState.player.energy - 5 : prevState.player.energy - 2,
       }
     }));
   };
@@ -39,7 +39,7 @@ export default class Game extends Component {
       return { player, action };
     });
 
-  }
+  };
 
   handleNameChange = name => {
     this.setState(({ player }) => {

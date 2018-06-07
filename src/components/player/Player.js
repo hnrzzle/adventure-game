@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import full from'../../images/fullheart.png';
-import half from'../../images/halfheart.png';
-import empty from'../../images/emptyheart.png';
+import full from '../../images/fullheart.png';
+import half from '../../images/halfheart.png';
+import empty from '../../images/emptyheart.png';
 import styles from './Player.css';
 
 const hearts = {
-    full,
-    half,
-    empty
-}
+  full,
+  half,
+  empty
+};
 export default class Player extends Component {
 
   static = {
@@ -28,23 +28,23 @@ export default class Player extends Component {
   };
 
   renderHearts = (energy) => {
-      const full = Math.floor(energy / 10);
-      const half = ((energy % 10) >= 5) ? 1 : 0;
-      const empty = 5 - full - half;
+    const full = Math.floor(energy / 10);
+    const half = ((energy % 10) >= 5) ? 1 : 0;
+    const empty = 5 - full - half;
 
-      let health = [];
-      function countHearts(count, image, key) {
-        for (let i=1; i <= count; i++){
-          health.push(<img key={key + i} src={image}/>);
-        }
-      };
+    let health = [];
+    function countHearts(count, image, key) {
+      for(let i = 1; i <= count; i++){
+        health.push(<img key={key + i} src={image}/>);
+      }
+    }
 
-      countHearts(full, hearts.full, 'full');
-      countHearts(half, hearts.half, 'half');
-      countHearts(empty, hearts.empty, 'empty');
+    countHearts(full, hearts.full, 'full');
+    countHearts(half, hearts.half, 'half');
+    countHearts(empty, hearts.empty, 'empty');
       
-      return health;
-  }
+    return health;
+  };
 
   render() {
     const { editing } = this.state;

@@ -6,14 +6,14 @@ const runningPath = {
                 nearby tree onto your shoulder!  Startled, you stop and try to pull it off you, but the little guy dives into your 
                 fanny pack, clearly fiending for a Luna Bar hit.  In a flash, he leaps down and away and sits up on a nearby bench,
                 waving something at you- your wallet!`,
-                `You're on the main running path, with no squirrel in sight.`
-        ],
+  'You\'re on the main running path, with no squirrel in sight.'
+  ],
   items: [    
     {
-    key: 'squirrel',
-    image: null,
-    description: 'Your squirrel nemesis has your wallet!'
-  }
+      key: 'squirrel',
+      image: null,
+      description: 'Your squirrel nemesis has your wallet!'
+    }
   ],
   directions: {
     e: 'meadow',
@@ -31,7 +31,7 @@ const meadow = {
   image: null,
   description: [`You follow the path into the open meadow, one of your favorite parts of the park.  The sun is out and there are birds everywhere.  
                 There is one sitting on a wire very close to you, looking at you.`,
-                `The meadow is sunny and open, with birds everywhere.`
+  'The meadow is sunny and open, with birds everywhere.'
   ],
   items: [
     {
@@ -57,7 +57,7 @@ const garden = {
   image: null,
   description: [`You walk into a secluded little garden.  You've seen it before, but never explored it during your runs.  The landscaping is simple,
                 with a large bush in the middle.  You seem to hear chittering sounds from nearby.`,
-              `A quiet little garden.  There are benches and bushes, but apparently nothing interesting.`],
+  'A quiet little garden.  There are benches and bushes, but apparently nothing interesting.'],
   items: [
     {
       key: 'bush',
@@ -70,8 +70,8 @@ const garden = {
     e: 'aTallHill'
   },
   use(energy) {
-    const pass = { energy: energy - 5, action: 'You spent five minutes poking around a bush. It\'s just a bush. You spent 5 energy.'};
-    const fail = { energy, action: 'You don\'t have the energy to even bother, and keep wandering'};
+    const pass = { energy: energy - 5, action: 'You spent five minutes poking around a bush. It\'s just a bush. You spent 5 energy.'  };
+    const fail = { energy, action: 'You don\'t have the energy to even bother, and keep wandering'  };
 
     return (energy > 2) ? pass : fail;
   }
@@ -83,7 +83,7 @@ const aTallHill = {
   image: null,
   description: [`You climb the tall hill you've always avoided on your runs.  It is exhausting, but there are lots of tall 
                 oaks and pines at the summit, lots of places for squirrels to hide.`,
-              `You've reached the top of the tall hill, but all the trees are empty.  There's a beautiful view of the city, though.`],
+  'You\'ve reached the top of the tall hill, but all the trees are empty.  There\'s a beautiful view of the city, though.'],
   items: [
     {
       key: 'squirrel',
@@ -99,7 +99,7 @@ const aTallHill = {
                   tree, but you manage to grab him by the tail and wrestle your wallet from his grubby little paws and fall to the grass 
                   exhausted, but with your Ben & Jerry's card safe in your possession.` };
     const fail = { energy: energy, action: `You chase the squirrel up the tree, but you do not have the energy to corner the fast little 
-                  bugger. He jumps from the tree with your wallet and escapes.`};
+                  bugger. He jumps from the tree with your wallet and escapes.`  };
     
     return (energy > 39) ? pass : fail;
   }
